@@ -101,6 +101,8 @@
   --accent-nonogram-bg:#D1FAE5;
   --accent-minesweeper:#DC2626;
   --accent-minesweeper-bg:#FEE2E2;
+  --accent-blockpuzzle:#7C3AED;
+  --accent-blockpuzzle-bg:#EDE9FE;
 
   /* ── Spacing Scale (8px base) ── */
   --space-1:4px;
@@ -338,6 +340,13 @@ body{
   background:var(--accent-minesweeper-bg);
   box-shadow:0 0 0 3px rgba(220,38,38,0.3);
 }
+.game-card[data-game="blockpuzzle"]{border-color:var(--accent-blockpuzzle)}
+.game-card[data-game="blockpuzzle"] .game-title{color:var(--accent-blockpuzzle)}
+.game-card[data-game="blockpuzzle"] .game-go{color:var(--accent-blockpuzzle)}
+.game-card[data-game="blockpuzzle"]:active{
+  background:var(--accent-blockpuzzle-bg);
+  box-shadow:0 0 0 3px rgba(124,58,237,0.3);
+}
 
 /* ═══════════════════════════════════════
    MORE NOTE — small, muted, friendly
@@ -416,7 +425,7 @@ body{
     <p class="hero-desc">천천히, 부담 없이 두뇌를 깨우는 게임을 하나씩 준비하고 있어요.</p>
   </section>
 
-  <!-- Games — 4 big cards -->
+  <!-- Games — 5 big cards -->
   <main class="game-grid">
 
     <a class="game-card" data-game="sudoku" href="https://sudokulee.github.io/" aria-label="아빠의 스도쿠 게임 시작">
@@ -451,6 +460,15 @@ body{
       <span class="game-body">
         <span class="game-title">아빠의 지뢰찾기</span>
         <span class="game-desc">숫자 단서를 따라 지뢰를 피해 안전한 칸을 여는 퍼즐</span>
+        <span class="game-go">게임하기</span>
+      </span>
+    </a>
+
+    <a class="game-card" data-game="blockpuzzle" href="https://blockpuzzlelee.github.io/" aria-label="아빠의 블록 퍼즐 게임 시작">
+      <span class="game-emoji" aria-hidden="true">🔲</span>
+      <span class="game-body">
+        <span class="game-title">아빠의 블록 퍼즐</span>
+        <span class="game-desc">블록을 채워 줄을 지우는 시간 제한 없는 퍼즐</span>
         <span class="game-go">게임하기</span>
       </span>
     </a>

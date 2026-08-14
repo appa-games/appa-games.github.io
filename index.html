@@ -9,11 +9,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <title>아빠의 게임 모음 - 무료 게임 포털</title>
-  <meta name="description" content="아빠의 게임 모음 - 큰 글씨와 넉넉한 버튼으로 심심한 아빠를 위한 무료 게임 포털. 아빠의 스도쿠, 아빠의 2048, 아빠의 네모로직, 아빠의 지뢰찾기를 한 곳에서 만나보세요.">
+  <meta name="description" content="아빠의 게임 모음 - 큰 글씨와 넉넉한 버튼으로 심심한 아빠를 위한 무료 게임 포털. 아빠의 스도쿠, 아빠의 2048, 아빠의 네모로직, 아빠의 지뢰찾기, 아빠의 블록 퍼즐, 아빠의 총알피하기를 한 곳에서 만나보세요.">
   <link rel="canonical" href="https://appa-games.github.io/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="아빠의 게임 모음 - 무료 게임 포털">
-  <meta property="og:description" content="아빠의 게임 모음 - 큰 글씨와 넉넉한 버튼으로 심심한 아빠를 위한 무료 게임 포털. 아빠의 스도쿠, 아빠의 2048, 아빠의 네모로직, 아빠의 지뢰찾기를 한 곳에서 만나보세요.">
+  <meta property="og:description" content="아빠의 게임 모음 - 큰 글씨와 넉넉한 버튼으로 심심한 아빠를 위한 무료 게임 포털. 아빠의 스도쿠, 아빠의 2048, 아빠의 네모로직, 아빠의 지뢰찾기, 아빠의 블록 퍼즐, 아빠의 총알피하기를 한 곳에서 만나보세요.">
   <meta property="og:url" content="https://appa-games.github.io/">
   <meta property="og:site_name" content="아빠의 게임 모음">
   <meta property="og:locale" content="ko_KR">
@@ -65,6 +65,18 @@
         "position": 4,
         "name": "아빠의 지뢰찾기",
         "url": "https://minesweeperlee.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "아빠의 블록 퍼즐",
+        "url": "https://blockpuzzlelee.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "아빠의 총알피하기",
+        "url": "https://bulletdodgelee.github.io/"
       }
     ]
   }
@@ -103,6 +115,8 @@
   --accent-minesweeper-bg:#FEE2E2;
   --accent-blockpuzzle:#7C3AED;
   --accent-blockpuzzle-bg:#EDE9FE;
+  --accent-bulletdodge:#DB2777;
+  --accent-bulletdodge-bg:#FCE7F3;
 
   /* ── Spacing Scale (8px base) ── */
   --space-1:4px;
@@ -347,6 +361,13 @@ body{
   background:var(--accent-blockpuzzle-bg);
   box-shadow:0 0 0 3px rgba(124,58,237,0.3);
 }
+.game-card[data-game="bulletdodge"]{border-color:var(--accent-bulletdodge)}
+.game-card[data-game="bulletdodge"] .game-title{color:var(--accent-bulletdodge)}
+.game-card[data-game="bulletdodge"] .game-go{color:var(--accent-bulletdodge)}
+.game-card[data-game="bulletdodge"]:active{
+  background:var(--accent-bulletdodge-bg);
+  box-shadow:0 0 0 3px rgba(219,39,119,0.3);
+}
 
 /* ═══════════════════════════════════════
    MORE NOTE — small, muted, friendly
@@ -469,6 +490,15 @@ body{
       <span class="game-body">
         <span class="game-title">아빠의 블록 퍼즐</span>
         <span class="game-desc">블록을 채워 줄을 지우는 시간 제한 없는 퍼즐</span>
+        <span class="game-go">게임하기</span>
+      </span>
+    </a>
+
+    <a class="game-card" data-game="bulletdodge" href="https://bulletdodgelee.github.io/" aria-label="아빠의 총알피하기 게임 시작">
+      <span class="game-emoji" aria-hidden="true">🎯</span>
+      <span class="game-body">
+        <span class="game-title">아빠의 총알피하기</span>
+        <span class="game-desc">떨어지는 총알을 피해 오래 살아남는 두뇌 회피 게임</span>
         <span class="game-go">게임하기</span>
       </span>
     </a>
